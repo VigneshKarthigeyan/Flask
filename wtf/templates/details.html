@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal details</title>
+</head>
+<body>
+{%for message in form.name.errors%}
+    {{message}}
+{%endfor%}
+<form action="http://127.0.0.1:5000/success" method="post">
+    <fieldset>
+        <legend>Vicky</legend>
+        <div>
+            {{form.name.label}}
+            <br>
+            {{form.name}}
+            <br>
+            {{form.email.label}}
+            <br>
+            {{form.email}}
+            <br>
+            {{form.work.label}}
+            <br>
+            {{form.work}}
+            <br>
+            {{form.submit}}
+        </div>
+    </fieldset>
+
+</form>
+</body>
+</html>
